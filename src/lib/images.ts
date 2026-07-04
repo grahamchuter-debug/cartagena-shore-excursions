@@ -7,11 +7,11 @@ const B = "/images";
 
 export const siteImages = {
   hero: {
-    src: `${B}/hero-home.svg`,
+    src: `${B}/hero-home.jpg`,
     alt: "Cartagena Roman Theatre, harbour and old town from the cruise port, Spain",
   },
   ogDefault: {
-    src: `${B}/og-default.svg`,
+    src: `${B}/og-default.jpg`,
     alt: "Cartagena cruise planning — Roman Theatre, harbour and historic old town, Spain",
   },
   logo: {
@@ -19,28 +19,28 @@ export const siteImages = {
     alt: "Cartagena Shore Excursions",
   },
   port: {
-    src: `${B}/cruise-port.svg`,
+    src: `${B}/cruise-port.jpg`,
     alt: "Cruise ships at Cartagena cruise port, Muelle Alfonso XII, Spain",
   },
 } as const;
 
 export const subjectImages: Record<string, SiteImage> = {
-  cartagena: { src: `${B}/cartagena.svg`, alt: "Cartagena old town and harbour from the cruise port" },
-  "roman-theatre": { src: `${B}/roman-theatre.svg`, alt: "Roman Theatre of Cartagena, Spain" },
-  "roman-forum": { src: `${B}/roman-forum.svg`, alt: "Roman Forum archaeological quarter in Cartagena" },
-  "punic-wall": { src: `${B}/punic-wall.svg`, alt: "Punic Wall archaeological experience, Cartagena" },
-  castle: { src: `${B}/castle.svg`, alt: "Castle of the Conception overlooking Cartagena harbour" },
-  "old-town": { src: `${B}/old-town.svg`, alt: "Cartagena historic old town lanes near the cruise port" },
-  harbour: { src: `${B}/harbour.svg`, alt: "Cartagena naval harbour and waterfront promenade" },
-  murcia: { src: `${B}/murcia.svg`, alt: "Murcia cathedral and city centre from Cartagena cruise port day trip" },
-  tapas: { src: `${B}/tapas.svg`, alt: "Cartagena tapas and local Spanish food for cruise passengers" },
-  market: { src: `${B}/market.svg`, alt: "Mercado de Santa Florentina and Cartagena market culture" },
-  maritime: { src: `${B}/maritime.svg`, alt: "Cartagena maritime history and naval port heritage" },
-  beach: { src: `${B}/beach.svg`, alt: "Cartagena beaches and Costa Cálida coastline" },
-  kayaking: { src: `${B}/kayaking.svg`, alt: "Coastal kayaking adventures near Cartagena, Spain" },
-  family: { src: `${B}/family.svg`, alt: "Family-friendly Cartagena sights near the cruise port" },
-  private: { src: `${B}/private.svg`, alt: "Private Cartagena experience for cruise passengers" },
-  planner: { src: `${B}/cartagena.svg`, alt: "Planning a Cartagena cruise port day in Spain" },
+  cartagena: { src: `${B}/cartagena.jpg`, alt: "Cartagena old town and harbour from the cruise port" },
+  "roman-theatre": { src: `${B}/roman-theatre.jpg`, alt: "Roman Theatre of Cartagena, Spain" },
+  "roman-forum": { src: `${B}/roman-forum.jpg`, alt: "Roman Forum archaeological quarter in Cartagena" },
+  "punic-wall": { src: `${B}/punic-wall.jpg`, alt: "Punic Wall archaeological experience, Cartagena" },
+  castle: { src: `${B}/castle.jpg`, alt: "Castle of the Conception overlooking Cartagena harbour" },
+  "old-town": { src: `${B}/old-town.jpg`, alt: "Cartagena historic old town lanes near the cruise port" },
+  harbour: { src: `${B}/harbour.jpg`, alt: "Cartagena naval harbour and waterfront promenade" },
+  murcia: { src: `${B}/murcia.jpg`, alt: "Murcia cathedral and city centre from Cartagena cruise port day trip" },
+  tapas: { src: `${B}/tapas.jpg`, alt: "Cartagena tapas and local Spanish food for cruise passengers" },
+  market: { src: `${B}/market.jpg`, alt: "Mercado de Santa Florentina and Cartagena market culture" },
+  maritime: { src: `${B}/maritime.jpg`, alt: "Cartagena maritime history and naval port heritage" },
+  beach: { src: `${B}/beach.jpg`, alt: "Cartagena beaches and Costa Cálida coastline" },
+  kayaking: { src: `${B}/kayaking.jpg`, alt: "Coastal kayaking adventures near Cartagena, Spain" },
+  family: { src: `${B}/family.jpg`, alt: "Family-friendly Cartagena sights near the cruise port" },
+  private: { src: `${B}/private.jpg`, alt: "Private Cartagena experience for cruise passengers" },
+  planner: { src: `${B}/cartagena.jpg`, alt: "Planning a Cartagena cruise port day in Spain" },
 };
 
 function pick(key: string): SiteImage {

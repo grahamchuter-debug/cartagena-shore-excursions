@@ -9,24 +9,52 @@ const WIDTH = 1600;
 const UA = "cartagena-shore-excursions/1.0 (image fetch; contact webmaster)";
 
 const targets = {
-  "cartagena.jpg": ["Cartagena Spain harbour", "Cartagena Murcia port"],
-  "roman-theatre.jpg": ["Roman Theatre Cartagena Spain", "Teatro Romano Cartagena"],
-  "roman-forum.jpg": ["Roman Forum Cartagena", "Cartagena archaeological museum"],
-  "punic-wall.jpg": ["Punic Wall Cartagena", "Muralla Punica Cartagena"],
-  "castle.jpg": ["Castillo de la Concepcion Cartagena", "Castle Cartagena harbour"],
-  "old-town.jpg": ["Cartagena old town Spain", "Cartagena historic centre"],
-  "harbour.jpg": ["Cartagena naval harbour", "Cartagena waterfront promenade"],
-  "murcia.jpg": ["Murcia cathedral Spain", "Murcia city centre"],
-  "tapas.jpg": ["Spanish tapas Cartagena", "Cartagena restaurant food"],
-  "market.jpg": ["Cartagena market Spain", "Mercado Cartagena"],
-  "maritime.jpg": ["Cartagena naval museum", "Cartagena maritime heritage"],
-  "beach.jpg": ["Cartagena beach Costa Calida", "La Manga beach Murcia"],
-  "kayaking.jpg": ["Kayaking Mediterranean Spain", "Coastal kayaking Cartagena"],
-  "family.jpg": ["Cartagena family travel", "Cartagena cruise port"],
-  "private.jpg": ["Cartagena guided tour", "Cartagena Spain sightseeing"],
-  "cruise-port.jpg": ["Cartagena cruise port", "Muelle Alfonso XII Cartagena"],
-  "hero-home.jpg": ["Cartagena Spain panorama", "Cartagena harbour aerial"],
-  "og-default.jpg": ["Cartagena Roman Theatre", "Cartagena Spain coastline"],
+  "cartagena.jpg": ["Cartagena Spain harbour", "Cartagena Murcia port", "Cartagena city Spain"],
+  "roman-theatre.jpg": ["Teatro Romano Cartagena", "Roman Theatre Cartagena Spain"],
+  "roman-forum.jpg": [
+    "Museo Foro Romano Cartagena",
+    "Roman Forum Cartagena Spain",
+    "Teatro Romano Cartagena interior",
+  ],
+  "punic-wall.jpg": ["Muralla Punica Cartagena", "Punic Wall Cartagena Spain", "Cartagena archaeology"],
+  "castle.jpg": [
+    "Castillo de la Concepcion Cartagena",
+    "Conception Castle Cartagena",
+    "Cartagena castle harbour view",
+  ],
+  "old-town.jpg": [
+    "Calle Mayor Cartagena",
+    "Cartagena old town Spain",
+    "Cartagena historic centre Murcia",
+  ],
+  "harbour.jpg": [
+    "Cartagena harbour Spain",
+    "Cartagena naval port",
+    "Cartagena waterfront Murcia",
+  ],
+  "murcia.jpg": ["Murcia cathedral Spain", "Catedral Murcia", "Murcia city Spain"],
+  "tapas.jpg": ["Spanish tapas", "Tapas bar Spain", "Pinchos Spanish food"],
+  "market.jpg": ["Spanish market food", "Mercado Spain vegetables", "Cartagena Spain market"],
+  "maritime.jpg": [
+    "Cartagena naval museum",
+    "Submarine Peral Cartagena",
+    "Cartagena maritime museum",
+  ],
+  "beach.jpg": ["La Manga del Mar Menor", "Cartagena beach Spain", "Costa Calida beach"],
+  "kayaking.jpg": ["Sea kayaking Mediterranean", "Kayaking Spain coast", "Kayak Mediterranean"],
+  "family.jpg": ["Cartagena Spain city", "Family travel Spain beach", "Cartagena cruise port"],
+  "private.jpg": ["Cartagena Spain sightseeing", "Cartagena guided tour", "Cartagena old town"],
+  "cruise-port.jpg": ["Cartagena cruise port", "Cruise ships Cartagena Spain", "Muelle Cartagena"],
+  "hero-home.jpg": [
+    "Panorama Roman Theatre Cartagena",
+    "Cartagena Spain panorama",
+    "Cartagena harbour aerial",
+  ],
+  "og-default.jpg": [
+    "Teatro Romano Cartagena",
+    "Cartagena Roman Theatre panorama",
+    "Cartagena Spain coastline",
+  ],
 };
 
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
@@ -68,7 +96,7 @@ async function grab(candidates) {
       const res = await fetch(url, { headers: { "User-Agent": UA } });
       if (!res.ok) continue;
       const buf = Buffer.from(await res.arrayBuffer());
-      if (buf.length < 25000) continue;
+      if (buf.length < 15000) continue;
       return { buf, url };
     } catch {}
   }
